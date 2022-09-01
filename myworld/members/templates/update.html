@@ -5,14 +5,15 @@
     <title>Add Template</title>
 </head>
 <body>
-<h1>Add member</h1>
-    <form action="addrecord/" method="post">
+    <h1>Update member</h1>
+
+    <form action="updaterecord/{{ mymember.id }}" method="post">
     {% csrf_token %}
     First Name:<br>
-    <input name="first">
+    <input name="first" value="{{ mymember.firstname }}">
     <br><br>
     Last Name:<br>
-    <input name="last">
+    <input name="last" value="{{ mymember.lastname }}">
     <br><br>
     <input type="submit" value="Submit">
     </form>
